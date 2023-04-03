@@ -1,5 +1,7 @@
 package com.example.multigame.data
 
+import com.example.multigame.data.MathQuizQuestion.Question
+
 val questions = listOf(
     Question(
         "What is 2+2?",

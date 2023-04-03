@@ -1,6 +1,6 @@
-package com.example.multigame.ui
+package com.example.multigame.ui.MathQuizGame
 
-import com.example.multigame.data.Question
+import com.example.multigame.data.MathQuizQuestion.Question
 
 data class GameUiState(
     val currentQuestionCount: Int = 1,

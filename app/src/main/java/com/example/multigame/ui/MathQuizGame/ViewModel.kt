@@ -1,8 +1,9 @@
 package com.example.multigame.ui
 
 import androidx.lifecycle.ViewModel
-import com.example.multigame.data.Question
+import com.example.multigame.data.MathQuizQuestion.Question
 import com.example.multigame.data.questions
+import com.example.multigame.ui.MathQuizGame.GameUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -12,9 +13,11 @@ class GameViewModel : ViewModel() {
     private var questionIndex = 0
     private val usedQuestions = mutableListOf<Int>()
 
-    private val _uiState = MutableStateFlow(GameUiState(
+    private val _uiState = MutableStateFlow(
+        GameUiState(
         currentQuestion = getNextQuestion(),
-    ))
+    )
+    )
     val uiState: StateFlow<GameUiState> = _uiState.asStateFlow()
 
     fun getNextQuestion(): Question {
